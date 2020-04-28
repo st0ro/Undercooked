@@ -8,7 +8,7 @@ import org.newdawn.slick.state.StateBasedGame;
 public class Undercooked extends StateBasedGame {
 
 	private static final int WIDTH = 1000;
-	private static final int HEIGHT = 500;
+	private static final int HEIGHT = 700;
 
 	public Undercooked() {
 		super("Undercooked!");
@@ -16,8 +16,10 @@ public class Undercooked extends StateBasedGame {
 
 	@Override
 	public void initStatesList(GameContainer container) throws SlickException {
-		// TODO Add game states here
-
+		container.setVSync(true);
+		addState(new MainMenuState());
+		addState(new LobbyState());
+		addState(new PlayState());
 	}
 
 	public static void main(String[] args) {
