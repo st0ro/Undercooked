@@ -12,10 +12,6 @@
 			<attribute name="javadoc_location" value="file:/C:/Users/apisa/Documents/GitHub/Undercooked/lib/slick/javadoc/"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="lib/kryonet-2.21/jars/production/onejar/kryonet-2.21-all.jar" sourcepath="lib/kryonet-2.21/java/src">
-		<attributes>
-			<attribute name="javadoc_location" value="file:/C:/Users/apisa/Documents/GitHub/Undercooked/lib/kryonet-2.21/javadoc/"/>
-		</attributes>
-	</classpathentry>
+	<classpathentry kind="lib" path="lib/slick/lib/jinput.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

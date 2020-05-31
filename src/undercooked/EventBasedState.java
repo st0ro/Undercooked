@@ -43,7 +43,7 @@ public abstract class EventBasedState implements GameState {
 
 	@Override
 	public boolean isAcceptingInput() {
-		return false;
+		return true;
 	}
 
 	@Override

@@ -46,6 +46,7 @@ public class ImageComponent extends ScreenComponent {
 		super(container);
 		try {
 			image = new Image(path);
+			image.setFilter(Image.FILTER_NEAREST);
 		} catch (SlickException e) {
 			e.printStackTrace();
 		}
@@ -63,13 +64,26 @@ public class ImageComponent extends ScreenComponent {
 	public ImageComponent(GUIContext container, Image src, int x, int y) {
 		super(container);
 		image = src;
+		image.setFilter(Image.FILTER_NEAREST);
 		screenBox = new Rectangle(0, 0, image.getWidth(), image.getHeight());
 		setLocation(x, y);
 	}
 
+	public ImageComponent(GUIContext container, Image src, int x, int y, int width, int height) {
+		super(container);
+		image = src;
+		image.setFilter(Image.FILTER_NEAREST);
+		screenBox = new Rectangle(0, 0, width, height);
+		setLocation(x, y);
+	}
+	
 	@Override
 	public void render(GUIContext container, Graphics g) throws SlickException {
 		image.draw(getX() - getWidth()/2, getY() - getHeight()/2, getWidth(), getHeight());
+	}
+	
+	public void setImage(Image image) {
+		this.image = image;
 	}
 
 }
